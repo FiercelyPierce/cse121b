@@ -49,8 +49,8 @@ const output = (pokemen) => {
     });
 }
 
-const getPokeCards = async () => {
-    let url = 'https://pokeapi.co/api/v2/type/2'
+const getPokeCards = async (TYPE) => {
+    let url = 'https://pokeapi.co/api/v2/type/' + TYPE
     const response = await fetch(url);
     pokeList = await response.json();
     output(pokeList);
